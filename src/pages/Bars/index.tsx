@@ -17,13 +17,13 @@ export const Bars = () => {
       setBars(data || []);
     })();
   }, []);
-
+  console.log(bars)
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>Bars List</h1>
 
       {bars.map(({ id, name }) => (
-        <Button paddingLeft='50px' paddingRight='20px' rightSection={<CocktailIcon />} outline h="108px" w="100%" onClick={() => navigate(`/bars/${id}`)}>{name}</Button>
+        <Button key={id} paddingLeft='50px' paddingRight='20px' rightSection={<CocktailIcon />} outline h="108px" w="100%" onClick={() => navigate(`/bars/${id}`)}>{name}</Button>
       ))}
     </div>
   )
