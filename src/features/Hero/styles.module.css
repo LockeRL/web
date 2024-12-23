@@ -1,0 +1,20 @@
+.container {
+  height: 75vh;
+  width: 100%;
+  background-image: url('./images/HeroImage.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 75px;
+  background-color: var(--color-primary);
+  width: fit-content;
+  padding: 0 70px 20px 30px;
+  border-radius: 0 0 50px 0;
+}

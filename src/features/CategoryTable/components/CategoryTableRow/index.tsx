@@ -1,0 +1,45 @@
+import { useDisclosure } from '@mantine/hooks'
+import { RoundedPlusIcon } from '../../../../assets'
+import styles from './styles.module.css'
+import { Collapse } from '@mantine/core';
+import { Props } from './types';
+
+export const CategoryTableRow: React.FC<Props> = ({
+  data
+}) => {
+  const [opened, { toggle }] = useDisclosure(false);
+
+  const { name, price } = data
+
+  return (
+    <>
+      <div className={styles.product} onClick={toggle}>
+        <p>
+          {name}
+        </p>
+
+        <div>
+          {price}₽
+          <RoundedPlusIcon />
+        </div>
+
+      </div>
+      {/* @ts-ignore */}
+      {data.ingredients && (
+        <Collapse in={opened}>
+          <div className={styles.collapse}>
+            <div>
+              <h3>Compound</h3>
+              <p>
+                {/* @ts-ignore */}
+                {data.ingredients.map((ingredient: string, index: number) => (
+                  <span key={index}>{ingredient}</span>
+                ))}
+              </p>
+            </div>
+          </div>
+        </Collapse>
+      )}
+    </>
+  )
+}

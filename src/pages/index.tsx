@@ -1,0 +1,6 @@
+export { Home } from './Home'
+export { Bars } from './Bars'
+export { Bar } from './Bar'
+export { Profile } from './Profile'
+export { Login } from './Login'
+export { Register } from './Register'

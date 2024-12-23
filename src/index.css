@@ -1,0 +1,9 @@
+:root {
+  --color-accent: #376C64;
+  --color-primary: #F9F2EA;
+  --color-secondary: #C2D9D5;
+}
+
+html, :root {
+  background-color: var(--color-primary);
+}
