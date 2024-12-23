@@ -31,7 +31,7 @@ export const CategoryTableRow: React.FC<Props> = ({
             <div>
               <h3>Compound</h3>
               <p>
-                {data.ingredient}
+                {data.ingredients}
               </p>
             </div>
           </div>
