@@ -43,15 +43,19 @@ export const Bar = () => {
       <div className={styles.contacts}>
         <div>
           <PointerIcon />
-          <p>Moscow</p>
+          <p>{bar?.city}</p>
         </div>
 
         <p>
-          Phone number - 8989898989
+          Phone number - {bar?.phone}
+        </p>
+
+        <p>
+          Website - {bar?.website}
         </p>
       </div>
 
-      <CategoryTable id={id} />
+      <CategoryTable id={id!} />
     </div>
   )
 }
