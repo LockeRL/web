@@ -31,10 +31,7 @@ export const CategoryTableRow: React.FC<Props> = ({
             <div>
               <h3>Compound</h3>
               <p>
-                {/* @ts-ignore */}
-                {data.ingredients.map((ingredient: string, index: number) => (
-                  <span key={index}>{ingredient}</span>
-                ))}
+                {data.ingredient}
               </p>
             </div>
           </div>
