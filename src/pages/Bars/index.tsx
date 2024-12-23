@@ -14,7 +14,7 @@ export const Bars = () => {
     (async () => {
       const data = await getBars();
 
-      setBars(data);
+      setBars(data || []);
     })();
   }, []);
 

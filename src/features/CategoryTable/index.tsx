@@ -16,7 +16,7 @@ export const CategoryTable: React.FC<Props> = ({
 
   useEffect(() => {
     (async () => {
-      const [drinks, food, hookahs] = await Promise.all([
+      const [drinks = [], food = [], hookahs = []] = await Promise.all([
         getBarDrinks(id),
         getBarFood(id),
         getBarHookahs(id),
