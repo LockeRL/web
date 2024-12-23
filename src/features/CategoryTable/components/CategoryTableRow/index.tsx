@@ -30,14 +30,13 @@ export const CategoryTableRow: React.FC<Props> = ({
         </div>
 
       </div>
-      {/* @ts-ignore */}
-      {"ingredients" in data && (
+      {("ingredients" in data || "description" in data) && (
         <Collapse in={opened}>
           <div className={styles.collapse}>
             <div>
               <h3>Compound</h3>
               <p>
-                {data.ingredients || data.description || ''}
+                {data?.ingredients || data?.description || ''}
               </p>
             </div>
           </div>
