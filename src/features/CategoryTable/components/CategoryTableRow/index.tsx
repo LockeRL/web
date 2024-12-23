@@ -9,7 +9,7 @@ export const CategoryTableRow: React.FC<Props> = ({
 }) => {
   const [opened, { toggle }] = useDisclosure(false);
 
-  const { name, price } = data
+  const { name, price } = data;
 
   return (
     <>
@@ -25,7 +25,7 @@ export const CategoryTableRow: React.FC<Props> = ({
 
       </div>
       {/* @ts-ignore */}
-      {data.ingredients && (
+      {"ingredients" in data && (
         <Collapse in={opened}>
           <div className={styles.collapse}>
             <div>
