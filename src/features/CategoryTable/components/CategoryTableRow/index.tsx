@@ -3,13 +3,19 @@ import { RoundedPlusIcon } from '../../../../assets'
 import styles from './styles.module.css'
 import { Collapse } from '@mantine/core';
 import { Props } from './types';
+import { useEffect } from 'react';
 
 export const CategoryTableRow: React.FC<Props> = ({
-  data
+  data,
+  selectedCategory
 }) => {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
 
   const { name, price } = data;
+
+  useEffect(() => {
+    close();
+  }, [selectedCategory]);
 
   return (
     <>
@@ -31,7 +37,7 @@ export const CategoryTableRow: React.FC<Props> = ({
             <div>
               <h3>Compound</h3>
               <p>
-                {data.ingredients}
+                {data.ingredients || data.description || ''}
               </p>
             </div>
           </div>

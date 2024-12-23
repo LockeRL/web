@@ -32,15 +32,15 @@ export const CategoryTable: React.FC<Props> = ({
     switch (selectedCategory) {
       case 'Foods':
         return foods.map((data, key) => (
-          <CategoryTableRow data={data} key={key} />
+          <CategoryTableRow data={data} key={key} selectedCategory={selectedCategory} />
         ))
       case 'Drinks':
         return drinks.map((data, key) => (
-          <CategoryTableRow data={data} key={key} />
+          <CategoryTableRow data={data} key={key} selectedCategory={selectedCategory} />
         ))
       case 'Hookahs':
         return hookahs.map((data, key) => (
-          <CategoryTableRow data={data} key={key} />
+          <CategoryTableRow data={data} key={key} selectedCategory={selectedCategory} />
         ))
       default:
         return null;
