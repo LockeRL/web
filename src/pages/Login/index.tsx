@@ -23,9 +23,10 @@ export const Login = () => {
     try {
       const data = await loginUser(login, password);
 
-      const { token } = data;
+      const { token, id } = data;
 
       localStorage.setItem('ACCESS_TOKEN', token)
+      localStorage.setItem('USER_ID', id)
 
       navigate('/')
     } catch (error: unknown) {

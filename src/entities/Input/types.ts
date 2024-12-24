@@ -7,5 +7,7 @@ export type Props = {
   leftSection?: ReactNode;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   styles?: Record<string, any>;
-  type?: string
+  type?: string;
+  disabled?: boolean;
+  value?: string;
 }

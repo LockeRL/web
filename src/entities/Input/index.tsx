@@ -9,11 +9,15 @@ export const Input: React.FC<Props> = ({
   onChange,
   styles,
   type,
+  disabled = false,
+  value
 }) => {
   return (
     <TextInput
+      disabled={disabled}
       type={type}
       label={label}
+      value={value}
       placeholder={placeholder}
       onChange={onChange}
       leftSection={leftSection}
