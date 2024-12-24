@@ -1,5 +1,5 @@
 import { getBars, getBarFood, getBarHookahs, getBarDrinks } from '../src/services/bars'; 
-import { apiInstance } from '../src/services/api'; // mock для API
+import { apiInstance } from '../src/services/api'; 
 
 jest.mock('../src/services/api', () => ({
   apiInstance: {
