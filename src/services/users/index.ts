@@ -28,3 +28,9 @@ export const loginUser = async (login: string, password: string): Promise<LoginU
 
   return data;
 }
+
+export const getUserById = async (id: string) => {
+  const { data } = await apiInstance.get(`/users/${id}`);
+
+  return data;
+}
