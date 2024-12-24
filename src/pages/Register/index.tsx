@@ -22,6 +22,10 @@ export const Register = () => {
       setError('Empty password');
     }
 
+    if (!secondName || !firstName) {
+      setError('Empty second name or first name')
+    }
+
     try {
       // @ts-ignore
       const status = await registerUser({ login, password, secondName, firstName });
