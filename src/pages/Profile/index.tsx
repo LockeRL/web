@@ -31,8 +31,8 @@ export const Profile = () => {
     <div className={styles.container}>
       <form className={styles.form}>
         <h3>Profile</h3>
-        <Input disabled placeholder='Login' value={data.firstName} styles={{ input: { width: "576px", height: "108px", backgroundColor: "var(--color-primary)", borderRadius: "100px", fontSize: "51px", paddingLeft: "50px", color: "var(--color-accent)" } }} />
-        <Input disabled value={data.secondName} placeholder='Password' styles={{ input: { width: "576px", height: "108px", backgroundColor: "var(--color-primary)", borderRadius: "100px", marginTop: "20px", fontSize: "51px", paddingLeft: "50px", color: "var(--color-accent)" } }} />
+        <Input disabled placeholder='Login' value={data?.firstName || ''} styles={{ input: { width: "576px", height: "108px", backgroundColor: "var(--color-primary)", borderRadius: "100px", fontSize: "51px", paddingLeft: "50px", color: "var(--color-accent)" } }} />
+        <Input disabled value={data?.secondName || ''} placeholder='Password' styles={{ input: { width: "576px", height: "108px", backgroundColor: "var(--color-primary)", borderRadius: "100px", marginTop: "20px", fontSize: "51px", paddingLeft: "50px", color: "var(--color-accent)" } }} />
       </form>
     </div>
   )
