@@ -12,6 +12,7 @@ export const Button: React.FC<Props> = ({
   disabled = false,
   paddingLeft = "0px",
   paddingRight = "0px",
+  justifyContent = "space-between"
 }) => {
 
   const styles = !outline ? {
@@ -48,7 +49,7 @@ export const Button: React.FC<Props> = ({
       w={w}
       h={h}
       style={{ fontSize: "52px" }}
-      styles={{ root: styles.root, inner: { display: "flex", flexDirection: "row", justifyContent: "space-between", ...styles.inner } }}
+      styles={{ root: styles.root, inner: { display: "flex", flexDirection: "row", justifyContent: justifyContent, ...styles.inner } }}
     >
       {children}
     </MantineButton >

@@ -5,5 +5,7 @@ export type Props = {
   placeholder?: string;
   rightSection?: ReactNode;
   leftSection?: ReactNode;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  styles?: Record<string, any>;
+  type?: string
 }

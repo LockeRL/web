@@ -11,4 +11,5 @@ export type Props = {
   paddingRight?: string;
   w?: string,
   h?: string,
+  justifyContent?: string,
 }

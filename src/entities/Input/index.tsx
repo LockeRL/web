@@ -7,9 +7,12 @@ export const Input: React.FC<Props> = ({
   leftSection,
   rightSection,
   onChange,
+  styles,
+  type,
 }) => {
   return (
     <TextInput
+      type={type}
       label={label}
       placeholder={placeholder}
       onChange={onChange}
@@ -19,7 +22,8 @@ export const Input: React.FC<Props> = ({
       styles={{
         input: {
           backgroundColor: "var(--color-primary)"
-        }
+        },
+        ...styles
       }}
     />
   )
